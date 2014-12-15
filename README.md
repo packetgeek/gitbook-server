@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The [container](https://registry.hub.docker.com/u/tobegit3hub/gitbook-server/) is based on Ubuntu 14.10 and latest gitbook.
+The [container](https://registry.hub.docker.com/u/tobegit3hub/gitbook-server/) is based on Ubuntu 14.10 and gitbook 1.3.4.
 
 You can run any gitbook locally without install nodejs or anything.
 
