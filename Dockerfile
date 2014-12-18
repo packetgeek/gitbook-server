@@ -3,6 +3,7 @@ MAINTAINER tobe tobeg3oogle@gmail.com
 
 RUN apt-get -y update
 
+# Install gitbook
 RUN apt-get install -y curl && \
     curl -sL https://deb.nodesource.com/setup | bash - && \
     apt-get install -y nodejs && \
@@ -10,5 +11,7 @@ RUN apt-get install -y curl && \
 
 RUN mkdir /gitbook
 WORKDIR /gitbook
+
+EXPOSE 4000
 
 CMD ["gitbook", "serve", "/gitbook"]
