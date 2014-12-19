@@ -15,4 +15,6 @@ RUN apt-get install -y calibre
 RUN mkdir /gitbook
 WORKDIR /gitbook
 
+EXPOSE 4000
+
 CMD ["gitbook", "serve", "/gitbook"]
