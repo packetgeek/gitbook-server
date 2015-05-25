@@ -3,14 +3,14 @@ MAINTAINER tobe tobeg3oogle@gmail.com
 
 RUN apt-get -y update
 
-# Install gitbook
-RUN apt-get install -y curl && \
-    curl -sL https://deb.nodesource.com/setup | bash - && \
-    apt-get install -y nodejs && \
-    npm install gitbook@1.3.4 -g
+# Install dependencies
+RUN apt-get install -y curl git calibre && \
+	curl -sL https://deb.nodesource.com/setup | bash - && \
+	apt-get install -y nodejs && \
+	npm install -g gitbook-cli
 
-# Support gitbook pdf
-RUN apt-get install -y calibre
+# Install latest version
+RUN gitbook install 2.0.2
 
 RUN mkdir /gitbook
 WORKDIR /gitbook
