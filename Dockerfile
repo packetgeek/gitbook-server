@@ -10,7 +10,7 @@ RUN apt-get install -y curl git calibre && \
 	npm install -g gitbook-cli
 
 # Install latest version
-RUN gitbook install 2.0.2
+RUN gitbook install 2.2.0
 
 RUN mkdir /gitbook
 WORKDIR /gitbook
