@@ -4,7 +4,9 @@
 
 ## Introduction (why fork?)
 
-This is my fork of [Tobe's](https://github.com/tobegit3hub/gitbook-server) git-book server.  I've updated the Dockerfile to build a more recent version of gitbook (currently 3.2.2, I think) on top of Ubuntu 16.04.  One of the repairs needed was the creation of a softlink from /usr/bin/nodejs to /usr/bin/node.
+This is my fork of [Tobe's](https://github.com/tobegit3hub/gitbook-server) gitbook server Dockerfile.  I've updated the Dockerfile to build a more recent version of gitbook (currently 3.2.2, I think) on top of Ubuntu 16.04.  One of the repairs needed was the creation of a softlink from /usr/bin/nodejs to /usr/bin/node.
+
+Note: the below "docker run" command will not work out-of-the-box because you cannot run "gitbook serve" until after you run "gitbook init".  It's a bit of a chicken/egg issue which I'm working to solve (along with getting a more recent version of gitbook-editor up and running).
 
 ## Usage
 
