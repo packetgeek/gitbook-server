@@ -1,13 +1,16 @@
-FROM ubuntu:14.10
-MAINTAINER tobe tobeg3oogle@gmail.com
+FROM ubuntu:16.04
+MAINTAINER packetgeek joatblog@gmail.com
 
-RUN apt-get -y update
+# adapted from https://github.com/tobegit3hub/gitbook-server
+# installs a more recent version of gitbook
+
+RUN apt-get update && apt-get upgrade -y
 
 # Install dependencies
-RUN apt-get install -y curl git calibre && \
-	curl -sL https://deb.nodesource.com/setup | bash - && \
-	apt-get install -y nodejs && \
-	npm install -g gitbook-cli
+RUN apt-get install -y curl git calibre nodejs npm bash
+RUN curl -sL https://deb.nodesource.com/setup | bash -
+RUN npm install -g gitbook-cli
+RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 # Install latest version
 RUN gitbook install 2.2.0
