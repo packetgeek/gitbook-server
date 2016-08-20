@@ -2,11 +2,9 @@
 
 ![](gitbook_and_docker.png)
 
-## Introduction
+## Introduction (why fork?)
 
-Gitbook-server helps to run gitbook without installing nodejs or anything.
-
-The [container](https://registry.hub.docker.com/u/tobegit3hub/gitbook-server/) is based on Ubuntu 14.10 and gitbook 1.3.4.
+This is my fork of [Tobe's](https://github.com/tobegit3hub/gitbook-server) git-book server.  I've updated the Dockerfile to build a more recent version of gitbook (currently 3.2.2, I think) on top of Ubuntu 16.04.  One of the repairs needed was the creation of a softlink from /usr/bin/nodejs to /usr/bin/node.
 
 ## Usage
 
